@@ -25,6 +25,13 @@ public class HomeServices {
     }
 
 
+    public Home getDataById(String id){
+        Home mylist = null;
+        mylist = basicDetail.stream().filter(ob ->ob.getId().equals(id)).findFirst().get();
+        return mylist;
+    }
+
+
 
 
 }
