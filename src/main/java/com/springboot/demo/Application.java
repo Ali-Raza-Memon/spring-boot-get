@@ -35,11 +35,23 @@ public class Application {
 	}
 
 
-	@RequestMapping(value="/add",method= RequestMethod.POST)
+	@PostMapping("/add")
+	//@RequestMapping(value="/add",method= RequestMethod.POST)
 	public Home addData(@RequestBody Home home){
+		this.homeServices.addDetails(home);
 		return home;
 	}
 
+	@DeleteMapping("delete/{homeId}")
+	public void deleteData(@PathVariable String homeId){
+		System.out.println(homeId);
+	}
+
+	@PutMapping("update/{homeId}")
+	public Home updateRecord(@RequestBody Home home,@PathVariable String homeId){
+		System.out.println(homeId);
+		return home;
+	}
 
 
 

@@ -31,6 +31,10 @@ public class HomeServices {
         return mylist;
     }
 
+    public void addDetails(Home home){
+        basicDetail.add(home);
+    }
+
 
 
 
